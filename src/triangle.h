@@ -1,22 +1,27 @@
+#pragma once
+
 #include <string>
+#include <iostream>
 
 using namespace std;
-class Triangle
-{
+class Triangle {
 public:
-    int a;
-    int b;
-    int c;
     Triangle();
     Triangle(double a, double b, double c);
     void setSides(double a, double b, double c);
     double circumference();
     double area();
     void print();
-    int Geta;
-    int Getb;
-    int Getc;
-    int Seta;
-    int Setb;
-    int Setc;
-}
+    int Geta();
+    int Getb();
+    int Getc();
+    void Seta(int a);
+    void Setb(int b);
+    void Setc(int c);
+    bool invariants();
+
+private:
+    int a_;
+    int b_;
+    int c_;
+};
